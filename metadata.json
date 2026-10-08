@@ -1,0 +1,6 @@
+{
+  "name": "Athlit AI",
+  "description": "Intelligent athletic coaching, biomechanical form analysis, dynamic periodization, and physiological recovery optimization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

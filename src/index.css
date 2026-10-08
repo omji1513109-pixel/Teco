@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Base White Neumorphic Canvas Variables */
+:root {
+  --neu-bg: #eef2f6;
+  --neu-surface: #f0f4f9;
+  --neu-surface-active: #e2e8f0;
+}
+
+body {
+  background-color: #eef2f6;
+  color: #1e293b;
+}
+
+/* Tabular figures for numbers, timers, telemetry readouts */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Neumorphic Extruded Cards & Panels (Soft White/Clay Elevation) */
+.neu-card {
+  background: #f0f4f9;
+  box-shadow: 8px 8px 20px rgba(166, 180, 200, 0.6), -8px -8px 20px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: #1e293b;
+}
+
+.neu-card-sm {
+  background: #f0f4f9;
+  box-shadow: 5px 5px 12px rgba(166, 180, 200, 0.55), -5px -5px 12px rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #1e293b;
+}
+
+/* Neumorphic Inset / Sunken Wells (Inputs, recessed screens, timer chambers, active filters) */
+.neu-inset {
+  background: #e6ebf2;
+  box-shadow: inset 4px 4px 9px rgba(166, 180, 200, 0.65), inset -4px -4px 9px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #1e293b;
+}
+
+.neu-inset-subtle {
+  background: #eaf0f7;
+  box-shadow: inset 2px 2px 6px rgba(166, 180, 200, 0.55), inset -2px -2px 6px rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #1e293b;
+}
+
+/* Neumorphic Tactile Interactive Button */
+.neu-btn {
+  background: #f0f4f9;
+  box-shadow: 4px 4px 10px rgba(166, 180, 200, 0.6), -4px -4px 10px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #334155;
+  transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-btn:hover {
+  background: #f8fafc;
+  box-shadow: 6px 6px 14px rgba(166, 180, 200, 0.7), -6px -6px 14px rgba(255, 255, 255, 1);
+  color: #0f172a;
+}
+
+.neu-btn:active, .neu-btn-active {
+  background: #e2e8f0;
+  box-shadow: inset 3px 3px 7px rgba(166, 180, 200, 0.7), inset -3px -3px 7px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(200, 210, 225, 0.6);
+  color: #0f172a;
+}
+
+/* Primary Neumorphic Button with Lime / Emerald Energy Core */
+.neu-btn-primary {
+  background: linear-gradient(135deg, #65a30d 0%, #4d7c0f 100%);
+  box-shadow: 5px 5px 14px rgba(166, 180, 200, 0.6), -4px -4px 10px rgba(255, 255, 255, 0.9), 0 0 16px rgba(101, 163, 13, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-btn-primary:hover {
+  background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+  box-shadow: 6px 6px 18px rgba(166, 180, 200, 0.7), -5px -5px 12px rgba(255, 255, 255, 1), 0 0 24px rgba(132, 204, 22, 0.35);
+  color: #ffffff;
+}
+
+.neu-btn-primary:active {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.4);
+}
+
+/* Neumorphic Sliders */
+input[type="range"] {
+  appearance: none;
+  background: #e5ebf2;
+  box-shadow: inset 2px 2px 5px rgba(166, 180, 200, 0.65), inset -2px -2px 5px rgba(255, 255, 255, 0.95);
+  height: 8px;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f0f4f9;
+  box-shadow: 3px 3px 8px rgba(166, 180, 200, 0.8), -3px -3px 8px rgba(255, 255, 255, 1), 0 0 10px rgba(101, 163, 13, 0.4);
+  border: 2.5px solid #65a30d;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #e5ebf2;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(166, 180, 200, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Global Text & Element Contrast Calibration for White Neumorphism */
+.neu-card h1, .neu-card h2, .neu-card h3, .neu-card h4 {
+  color: #0f172a;
+}
+.neu-card .text-white {
+  color: #0f172a !important;
+}
+.neu-card .text-neutral-100 {
+  color: #1e293b !important;
+}
+.neu-card .text-neutral-200 {
+  color: #334155 !important;
+}
+.neu-card .text-neutral-300 {
+  color: #475569 !important;
+}
+.neu-card .text-neutral-400 {
+  color: #64748b !important;
+}
+.neu-card .text-neutral-500 {
+  color: #94a3b8 !important;
+}
+.neu-card .border-black\/40, .neu-card .border-black\/50, .neu-card .border-black\/30 {
+  border-color: rgba(203, 213, 225, 0.6) !important;
+}
+.neu-card .divide-black\/40 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(203, 213, 225, 0.6) !important;
+}
+.neu-card .border-white\/5, .neu-card .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.neu-inset .text-white {
+  color: #0f172a !important;
+}
+.neu-inset .text-neutral-200, .neu-inset .text-neutral-300 {
+  color: #334155 !important;
+}
+.neu-inset .text-neutral-400 {
+  color: #64748b !important;
+}
+
+.neu-inset-subtle .text-white {
+  color: #0f172a !important;
+}
+.neu-inset-subtle .text-neutral-200, .neu-inset-subtle .text-neutral-300 {
+  color: #334155 !important;
+}
+.neu-inset-subtle .text-neutral-400 {
+  color: #64748b !important;
+}
+
+/* Energetic Lime Text Contrast on Light Backgrounds */
+.text-lime-400 {
+  color: #4d7c0f !important;
+}
+.text-amber-400 {
+  color: #b45309 !important;
+}
+.text-cyan-400 {
+  color: #0369a1 !important;
+}
+.text-rose-400, .text-rose-500 {
+  color: #be123c !important;
+}
+.text-emerald-400 {
+  color: #047857 !important;
+}
